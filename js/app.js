@@ -1,8 +1,11 @@
 const images = document.querySelectorAll('.property__image')
 
 window.addEventListener('scroll', () => {
-	const scrollY = this.scrollY / -20
-	images.forEach((image) => {
+	let scrollY = this.scrollY / -20
+	images.forEach((image, index) => {
+		if (index >= 5) {
+			scrollY /= -50
+		}
 		image.style.backgroundPositionY = `${scrollY}px`
 	})
 })
