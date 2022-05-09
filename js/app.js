@@ -4,7 +4,7 @@ window.addEventListener('scroll', () => {
 	let scrollY = this.scrollY / -20
 	images.forEach((image, index) => {
 		if (index >= 5) {
-			scrollY /= -50
+			scrollY /= -100
 		}
 		image.style.backgroundPositionY = `${scrollY}px`
 	})
